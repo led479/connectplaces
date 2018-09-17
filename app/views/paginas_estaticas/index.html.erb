@@ -1,7 +1,16 @@
 <h1>ConnectPlaces</h1>
-<div class="nospace">
-  <%= image_tag("Praia-Jurere-Florianópolis-por-le-costume.jpg", size: "600x480") %>
-  <%= image_tag("ctnr-bar.jpg", size: "600x480") %>
+
+<div class="barra-de-busca" >
+  <div class="search">
+    <input type="text" class="searchTerm" placeholder="Que lugar você procura?">
+    <button type="submit" class="searchButton">
+      <i class="fa fa-search" aria-hidden="true"></i>
+    </button>
+  </div>
+</div>
+<div class="nospace center">
+  <%= image_tag("Praia-Jurere-Florianópolis-por-le-costume.jpg", size: "600x520") %>
+  <%#= image_tag("ctnr-bar.jpg", size: "600x480") %>
   <%= image_tag("Mirante-da-Lagoa-da-Conceição.jpg") %>
 </div>
-<p>Encontre Lugares:</p>
+
