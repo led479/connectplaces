@@ -21,6 +21,7 @@ class PessoasController < ApplicationController
   def edit
   end
 
+
   # POST /pessoas
   # POST /pessoas.json
   def create
