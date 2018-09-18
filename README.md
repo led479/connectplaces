@@ -1,24 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Entra no cmd, da um git clone https://github.com/led479/connectplaces (pasta que ficará)
+dps entra na pasta e dá um bundle install
+dps um rails db:migrate
+* Ta pronto pra ser trabalhado
