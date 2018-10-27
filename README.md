@@ -1,5 +1,5 @@
 # LEIA ISTO
-* Primeiramente instalar o rails seguindo o link https://nandovieira.com.br/configurando-ruby-rails-mysql-postgresql-git-no-ubuntu (até a parte que instala o rails)
+* Primeiramente instalar o rails seguindo o link https://nandovieira.com.br/configurando-ruby-rails-mysql-postgresql-git-no-ubuntu (pule a parte do MySQL e PostgreSQL e pare após instalar o rails e o nodejs)
 * Após isto rodar o comando para instalar o sqlite3
 ```sh
 sudo apt install libsqlite3-dev
