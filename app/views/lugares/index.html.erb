@@ -1,2 +1,7 @@
-<h1>Lugares#index</h1>
-<p>Find me in app/views/lugares/index.html.erb</p>
+<% @lugares.each do |lugar|  %>
+  <ol>
+    <li>
+      <%= "#{lugar.nome}, #{lugar.endereco}, #{lugar.cidade}, #{lugar.estado}, #{lugar.tipo}" %>
+    </li>
+  </ol>
+<% end %>
