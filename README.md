@@ -4,9 +4,15 @@
 ```sh
 sudo apt install libsqlite3-dev
 ```
-* Depois entreno terminal,e digite o comando a seguir para clonar o projeto
+* Depois entre no terminal,e digite o comando a seguir para clonar o projeto
  ```sh
 git clone https://github.com/led479/connectplaces.git pasta-que-ficará-o-projeto
  ```
-* dps entra na pasta e dá um bundle install e dps um rails db:migrate
-* Ta pronto pra ser trabalhado
+* Depois entra na pasta e digite os comandos a seguir
+```sh
+bundle install && rails db:migrate
+```
+* Após isto é só hostear o server e acessar pelo http://localhost:3000 utilizando o comando
+```sh
+rails server
+```
