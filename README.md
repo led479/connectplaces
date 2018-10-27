@@ -4,7 +4,7 @@
 ```sh
 sudo apt install libsqlite3-dev
 ```
-* Depois entre no terminal,e digite o comando a seguir para clonar o projeto
+* Depois entre no terminal e digite o comando a seguir para clonar o projeto
  ```sh
 git clone https://github.com/led479/connectplaces.git pasta-que-ficará-o-projeto
  ```
