@@ -17,7 +17,7 @@ class LugaresController < ApplicationController
     if @lugar.save
       redirect_to @lugar
     else
-      #tratar params errados
+      #@TODO tratar params errados
     end
   end
 
@@ -29,17 +29,14 @@ class LugaresController < ApplicationController
     if @lugar.update_attributes(params)
       redirect_to @lugar
     else
-      #tratar params errados
+      #@TODO tratar params errados
     end
   end
 
   def delete
     @lugar = Lugar.find(params[:id])
-    if @lugar.destroy
-      redirect_to root_path
-    else
-      #nao conseguiu deletar ???
-    end
+    @lugar.destroy
+    redirect_to root_url
   end
 
   private
