@@ -1,8 +1,9 @@
 # LEIA ISTO
 * Primeiramente instalar o rails seguindo o link https://nandovieira.com.br/configurando-ruby-rails-mysql-postgresql-git-no-ubuntu (pule a parte do MySQL e PostgreSQL e pare após instalar o rails e o nodejs)
-* Após isto rodar o comando para instalar o sqlite3
+* Após isto rodar o comando para instalar o sqlite3 e as dependências
 ```sh
 sudo apt install libsqlite3-dev
+sudo apt install gcc libcurl4-openssl-dev libxml2-dev -y
 ```
 * Depois entre no terminal e digite o comando para clonar o projeto
  ```sh
