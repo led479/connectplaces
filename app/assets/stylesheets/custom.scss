@@ -231,3 +231,10 @@ input {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border:0;
+  }
+}

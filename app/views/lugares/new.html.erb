@@ -1,2 +1,6 @@
 <h1>Lugares#new</h1>
-<p>Find me in app/views/lugares/new.html.erb</p>
+<% if logged_in? %>
+  <%= render 'lugares/lugares_form' %>
+<% else %>
+  <h1>Você precisa estar logado para cadastrar um lugar</h1>
+<% end %>
