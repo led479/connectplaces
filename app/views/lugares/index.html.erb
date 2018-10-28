@@ -2,6 +2,7 @@
   <ol>
     <li>
       <%= "#{lugar.nome}, #{lugar.endereco}, #{lugar.cidade}, #{lugar.estado}, #{lugar.tipo}" %>
+      <%= image_tag lugar.picture.url if lugar.picture? %>
     </li>
   </ol>
 <% end %>

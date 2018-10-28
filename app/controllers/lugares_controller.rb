@@ -12,7 +12,7 @@ class LugaresController < ApplicationController
   end
 
   def create
-    @lugar = @pessoa_logada.lugares.build(lugar_params)
+    @lugar = pessoa_logada.lugares.build(lugar_params)
 
     if @lugar.save
       redirect_to @lugar
@@ -42,6 +42,6 @@ class LugaresController < ApplicationController
   private
 
   def lugar_params
-    params.require(:lugar).permit(:nome, :descricao, :cidade, :estado, :endereco, :tipo)
+    params.require(:lugar).permit(:nome, :descricao, :cidade, :estado, :endereco, :tipo, :picture)
   end
 end

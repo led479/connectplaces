@@ -8,6 +8,8 @@ gem 'rails', '~> 5.2.1'
 gem 'bcrypt'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
+gem 'carrierwave'
+gem 'mini_magick'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server

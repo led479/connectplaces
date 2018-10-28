@@ -1,2 +1,3 @@
-<h1>Lugares#show</h1>
-<p>Find me in app/views/lugares/show.html.erb</p>
+<h1><%= @lugar.nome %></h1>
+<p><%= @lugar.descricao %></p>
+<%= image_tag @lugar.picture.url if @lugar.picture? %>
