@@ -1,0 +1,36 @@
+<%= form_for(@lugar) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+
+  <%= f.label :nome %>
+  <%= f.text_field :nome, class: 'form-control' %>
+
+  <%= f.label :descricao %>
+  <%= f.text_field :descricao, class: 'form-control' %>
+
+  <%= f.label :estado %>
+  <%= f.text_field :estado, class: 'form-control' %>
+
+  <%= f.label :cidade %>
+  <%= f.text_field :cidade, class: 'form-control'%>
+
+  <%= f.label :endereco %>
+  <%= f.text_field :endereco, class: 'form-control' %>
+
+  <%= f.label :tipo %>
+  <%= f.text_field :tipo, class: 'form-control' %>
+
+  <span class="picture">
+    <%= f.label "Foto" %>
+    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+  </span>
+  <%= f.submit "Confirmar", class: "btn, btn-primary" %>
+<% end %>
+
+<script type="text/javascript">
+    $('#lugar_picture').bind('change', function() {
+        var size_in_megabytes = this.files[0].size/1024/1024;
+        if (size_in_megabytes > 5) {
+            alert('Maximum file size is 5MB. Please choose a smaller file.');
+        }
+    });
+</script>
