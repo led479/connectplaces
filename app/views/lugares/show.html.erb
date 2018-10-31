@@ -1,3 +1,8 @@
 <h1><%= @lugar.nome %></h1>
 <p><%= @lugar.descricao %></p>
-<%= image_tag @lugar.picture.url if @lugar.picture? %>
+<div style="float:left">
+  <%= image_tag @lugar.picture.url if @lugar.picture? %>
+</div>
+<div style="margin-left:500px">
+  <%= render 'map', endereco: @lugar.endereco %>
+</div>
