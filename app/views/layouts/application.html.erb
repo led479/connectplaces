@@ -12,7 +12,9 @@
 
   <body>
     <%= render 'layouts/header' %>
-    <%= yield %>
+    <div style="overflow:auto;">
+      <%= yield %>
+    </div>
     <%= render 'layouts/footer' %>
   </body>
 </html>

@@ -3,6 +3,6 @@
 <div style="float:left">
   <%= image_tag @lugar.picture.url if @lugar.picture? %>
 </div>
-<div style="margin-left:500px">
+<div style="float:right">
   <%= render 'map', endereco: @lugar.endereco %>
 </div>
