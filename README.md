@@ -7,7 +7,7 @@ sudo apt install gcc libcurl4-openssl-dev libxml2-dev -y
 ```
 * Depois entre no terminal e digite o comando para clonar o projeto
  ```sh
-git clone https://github.com/led479/connectplaces.git pasta-que-ficará-o-projeto
+git clone https://github.com/led479/connectplaces.git connectplaces
  ```
 * Depois entra na pasta e digite os comandos
 ```sh
