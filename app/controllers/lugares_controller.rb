@@ -1,16 +1,22 @@
 class LugaresController < ApplicationController
+
+  # GET /lugares
   def index
     @lugares = Lugar.all
   end
 
+  # GET /lugares/{id}
   def show
     @lugar = Lugar.find(params[:id])
   end
 
+
+  # SHOW
   def new
     @lugar = Lugar.new
   end
 
+  # POST /lugares
   def create
     @lugar = pessoa_logada.lugares.build(lugar_params)
 
@@ -21,10 +27,12 @@ class LugaresController < ApplicationController
     end
   end
 
+  # GET /lugares/{id}
   def edit
     @lugar = Lugar.find(params[:id])
   end
 
+  # PUT /lugares/{id}
   def update
     if @lugar.update_attributes(params)
       redirect_to @lugar
