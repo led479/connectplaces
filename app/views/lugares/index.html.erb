@@ -1,11 +1,11 @@
 <% @lugares.each do |lugar|  %>
-  <ol>
+  <ul>
     <li>
       <% if lugar.picture? %>
-        <%= link_to(image_tag(lugar.picture.url), lugar_path(lugar.id)) %>
+        <%= link_to(image_tag(lugar.picture.url, width: 400, height: 260), lugar_path(lugar.id)) %>
       <% end %>
       <%= "#{lugar.nome}, #{lugar.endereco}, #{lugar.cidade}, #{lugar.estado}, #{lugar.tipo}" %>
       <%= link_to "Editar", edit_lugar_path(lugar.id) %>
     </li>
-  </ol>
+  </ul>
 <% end %>
