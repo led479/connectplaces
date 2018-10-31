@@ -1,5 +1,5 @@
 class Lugar < ApplicationRecord
   belongs_to :pessoa
 
-  mount_uploader :picture, PictureUploader
+  mount_uploaders :pictures, PictureUploader
 end

@@ -50,6 +50,6 @@ class LugaresController < ApplicationController
   private
 
   def lugar_params
-    params.require(:lugar).permit(:nome, :descricao, :cidade, :estado, :endereco, :tipo, :picture)
+    params.require(:lugar).permit(:nome, :descricao, :cidade, :estado, :endereco, :tipo, pictures: [])
   end
 end

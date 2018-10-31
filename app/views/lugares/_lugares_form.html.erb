@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@lugar) do |f| %>
+    <%= form_for(@lugar, html: { multipart: true }) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
 
       <%= f.label :nome %>
@@ -23,7 +23,7 @@
 
       <span class="picture">
         <%= f.label "Foto" %>
-        <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+        <%= f.file_field :pictures, multiple: true, accept: 'image/jpeg,image/gif,image/png' %>
       </span>
       <%= f.submit "Confirmar", class: "btn btn-primary" %>
     <% end %>
