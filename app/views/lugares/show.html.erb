@@ -2,7 +2,10 @@
   <h1><%= @lugar.nome %></h1>
   <p><%= @lugar.descricao %></p>
   <div style="float:left">
-    <%= carousel_for(@lugar.pictures) %>
+    <%#= carousel_for(@lugar.pictures) %>
+    <% @lugar.pictures.each do |pic| %>
+     <%= image_tag(pic.url, width: 400, height: 260) %>
+    <% end %>
   </div>
   <div style="float:right">
     <%= render 'map', endereco: @lugar.endereco %>
