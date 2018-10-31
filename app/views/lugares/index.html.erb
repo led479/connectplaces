@@ -1,11 +1,17 @@
 <% @lugares.each do |lugar|  %>
   <ul>
     <li>
-      <% if lugar.picture? %>
-        <%= link_to(image_tag(lugar.picture.url, width: 400, height: 260), lugar_path(lugar.id)) %>
-      <% end %>
-      <%= "#{lugar.nome}, #{lugar.endereco}, #{lugar.cidade}, #{lugar.estado}, #{lugar.tipo}" %>
-      <%= link_to "Editar", edit_lugar_path(lugar.id) %>
+      <div>
+        <% if lugar.picture? %>
+          <%= link_to(image_tag(lugar.picture.url, width: 400, height: 260), lugar_path(lugar.id)) %>
+        <% end %>
+        <%= "#{lugar.nome}, #{lugar.endereco}, #{lugar.cidade}, #{lugar.estado}, #{lugar.tipo}" %>
+        <%= link_to "Editar", edit_lugar_path(lugar.id) %>
+      </div>
+      <div><%= "#{lugar.descricao}" %></div>
+
+<!--      <div><%#= carousel_for(lugar.picture) %></div>-->
+
     </li>
   </ul>
 <% end %>
