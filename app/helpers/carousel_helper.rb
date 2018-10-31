@@ -1,3 +1,5 @@
+# Tutorial Page:
+# https://www.toptal.com/ruby-on-rails/rails-helper-bootstrap-carousel
 module CarouselHelper
   def carousel_for(images)
     Carousel.new(self, images).html
