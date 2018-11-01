@@ -27,6 +27,7 @@ class PessoasController < ApplicationController
 
     if @pessoa.save
       redirect_to @pessoa, notice: 'Pessoa was successfully created.'
+      log_in @pessoa
     else
       #@TODO tratar params errados
       render :new

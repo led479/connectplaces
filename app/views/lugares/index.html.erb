@@ -1,17 +1,24 @@
-<ul>
+<div class="row">
   <% @lugares.each do |lugar|  %>
-    <li>
-      <div>
-        <% if lugar.pictures? %>
+<!--<%#= link_to lugar_path(lugar.id) do %> Tentativa de fazer a div inteira clicavel.-->
+    <div class="col-md-12 lugarNaLista">
+      <% if lugar.pictures? %>
+        <div class="col-md-3">
           <%= link_to(image_tag(lugar.pictures[0].url, width: 400, height: 260), lugar_path(lugar.id)) %>
-        <% end %>
-        <%= "#{lugar.nome}, #{lugar.endereco}, #{lugar.cidade}, #{lugar.estado}, #{lugar.tipo}" %>
-        <%= link_to "Editar", edit_lugar_path(lugar.id) %>
+        </div>
+      <% end %>
+
+      <div class="col-md-9 nomeLugar">
+        <%= lugar.nome %>
       </div>
-      <div><%= "#{lugar.descricao}" %></div>
+      <div class="col-md-3 enderecoLugar">
+        <%= " #{lugar.endereco}, #{lugar.cidade}, #{lugar.estado}, #{lugar.tipo}" %>
+      </div>
 
-
-    </li>
+    </div>
+  <%# end %>
   <% end %>
-</ul>
+</div>
+
+
 

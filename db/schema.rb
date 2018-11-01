@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 2018_10_28_213338) do
     t.datetime "updated_at", null: false
     t.integer "pessoa_id"
     t.string "endereco"
-    t.string "picture"
     t.json "pictures"
   end
 
