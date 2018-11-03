@@ -4,7 +4,7 @@
     <%= @lugar.descricao %>
   </div>
 
-  <div style="float:left">
+  <div style="float:left" class="img-fluid">
     <%#= carousel_for(@lugar.pictures) %>
     <% @lugar.pictures.each do |pic| %>
      <%= image_tag(pic.url, width: 480, height: 320) %>
