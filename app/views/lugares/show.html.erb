@@ -11,7 +11,7 @@
     <% end %>
   </div>
   <div style="float:right">
-    <%= render 'map', endereco: @lugar.endereco %>
+    <%= render 'map', endereco: "#{@lugar.endereco}, #{@lugar.cidade}, #{@lugar.estado}" %>
   </div>
   <div>
     <%= render 'comentarios/comentarios_form' %>
