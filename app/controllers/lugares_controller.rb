@@ -7,7 +7,10 @@ class LugaresController < ApplicationController
 
   # GET /lugares/{id}
   def show
+    salvar_id_pagina(params[:id])
     @lugar = Lugar.find(params[:id])
+    @comentario = Comentario.new
+    byebug
   end
 
 

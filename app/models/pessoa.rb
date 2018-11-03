@@ -1,5 +1,6 @@
 class Pessoa < ApplicationRecord
   has_many :lugares
+  has_many :comentarios
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   validates :nome, presence: true, length: { maximum: 50 }

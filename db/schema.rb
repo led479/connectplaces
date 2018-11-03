@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_28_213338) do
+ActiveRecord::Schema.define(version: 2018_11_03_171926) do
+
+  create_table "comentarios", force: :cascade do |t|
+    t.string "texto"
+    t.integer "nota"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "pessoa_id"
+    t.integer "lugar_id"
+  end
 
   create_table "lugares", force: :cascade do |t|
     t.string "nome"

@@ -4,6 +4,10 @@ module SessionsHelper
     session[:pessoa_id] = pessoa.id
   end
 
+  def id_logado
+    session[:pessoa_id]
+  end
+
   def pessoa_logada
     if session[:pessoa_id]
       @pessoa_logada ||= Pessoa.find_by(id: session[:pessoa_id])

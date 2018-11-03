@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@comentario) do |f| %>
+
+      <%= f.label :texto %>
+      <%= f.text_area :texto, class: 'form-control' %>
+
+      <%= f.label :nota %>
+      <%= f.text_field :nota, class: 'form-control' %>
+
+      <%= f.submit "Postar", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
