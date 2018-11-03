@@ -7,7 +7,7 @@
   <div style="float:left">
     <%#= carousel_for(@lugar.pictures) %>
     <% @lugar.pictures.each do |pic| %>
-     <%= image_tag(pic.url, width: 800, height: 520) %>
+     <%= image_tag(pic.url, width: 480, height: 320) %>
     <% end %>
   </div>
   <div style="float:right">
@@ -15,6 +15,26 @@
   </div>
   <div>
     <%= render 'comentarios/comentarios_form' %>
+  </div>
+  <div>
+    <% @lugar.comentarios.each do |comentario| %>
+      <div class="comentario">
+        <div class="donoComentario">
+          <%= comentario.pessoa.nome %>
+        </div>
+        <div class="idadeComentario">
+          Posted <%= time_ago_in_words(comentario.created_at) %> ago.
+        </div>
+        <div class="textoComentario">
+          <%= comentario.texto%>
+        </div>
+        <% if comentario.nota? %>
+          <div>
+            Nota: <%= comentario.nota %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </div>
 

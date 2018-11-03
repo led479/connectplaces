@@ -1,3 +1,22 @@
 // Place all the styles related to the comentarios controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.donoComentario {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.comentario {
+  border-bottom: 1px solid #2E2F30;
+  padding: 10px;
+  padding-left: 0px;
+  display: block;
+}
+
+.idadeComentario {
+  font-style: italic;
+}
+
+.textoComentario {
+  font-size: 15px;
+}
