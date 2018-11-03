@@ -10,7 +10,6 @@ class LugaresController < ApplicationController
     salvar_id_pagina(params[:id])
     @lugar = Lugar.find(params[:id])
     @comentario = Comentario.new
-    byebug
   end
 
 
