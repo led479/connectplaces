@@ -13,10 +13,18 @@
   <div style="float:right">
     <%= render 'map', endereco: "#{@lugar.endereco}, #{@lugar.cidade}, #{@lugar.estado}" %>
   </div>
-  <div>
-    <%= render 'comentarios/comentarios_form' %>
-  </div>
-  <div>
+  <% if logged_in? %>
+    <div>
+      <%= render 'comentarios/comentarios_form' %>
+    </div>
+  <% else %>
+    <div class="logarComentarios">
+      <%= link_to "Você precisa estar logado", login_path %> para postar comentários
+
+    </div>
+
+  <% end %>
+  <div class="container row">
     <% @lugar.comentarios.each do |comentario| %>
       <div class="comentario">
         <div class="donoComentario">
@@ -36,5 +44,6 @@
       </div>
     <% end %>
   </div>
+
 </div>
 
