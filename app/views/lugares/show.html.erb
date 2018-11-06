@@ -1,16 +1,20 @@
-<div style="overflow: auto">
+<div>
   <div class="nomeLugar tituloLugar"><%= @lugar.nome %></div>
   <div class="descricaoLugar">
     <%= @lugar.descricao %>
   </div>
 
-  <div style="float:left" class="img-fluid">
-    <%#= carousel_for(@lugar.pictures) %>
+
+  <div class="imagens">
+    <ul>
     <% @lugar.pictures.each do |pic| %>
-     <%= image_tag(pic.url, width: 480, height: 320) %>
+      <li>
+        <%= image_tag(pic.url, class: "img-responsive") %>
+      </li>
     <% end %>
+    </ul>
   </div>
-  <div style="float:right">
+  <div class="mapa">
     <%= render 'map', endereco: "#{@lugar.endereco}, #{@lugar.cidade}, #{@lugar.estado}" %>
   </div>
   <% if logged_in? %>
@@ -24,7 +28,7 @@
     </div>
 
   <% end %>
-  <div class="container row">
+  <div class="container">
     <% @lugar.comentarios.each do |comentario| %>
       <div class="comentario">
         <div class="donoComentario">

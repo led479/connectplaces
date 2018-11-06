@@ -30,3 +30,19 @@
 .tituloLugar {
   padding-left: 20px;
 }
+
+.imagens {
+  position: relative;
+  float: left;
+  margin: 0 auto;
+  ul {
+    padding: 0;
+    li {
+      list-style: none;
+    }
+  }
+}
+
+.mapa {
+  float: right;
+}
