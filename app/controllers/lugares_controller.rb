@@ -2,7 +2,14 @@ class LugaresController < ApplicationController
 
   # GET /lugares
   def index
-    @lugares = Lugar.all
+    @lugares = if params[:term]
+      Lugar.where('tipo LIKE ? OR nome LIKE ? OR cidade LIKE ? OR estado LIKE ? OR endereco LIKE ?',
+                  "%#{params[:term]}%", "%#{params[:term]}%", "%#{params[:term]}%",
+                  "%#{params[:term]}%", "%#{params[:term]}%")
+    else
+      Lugar.all
+    end
+
   end
 
   # GET /lugares/{id}
@@ -52,6 +59,6 @@ class LugaresController < ApplicationController
   private
 
   def lugar_params
-    params.require(:lugar).permit(:nome, :descricao, :cidade, :estado, :endereco, :tipo, pictures: [])
+    params.require(:lugar).permit(:nome, :descricao, :cidade, :estado, :endereco, :tipo, :term, pictures: [])
   end
 end

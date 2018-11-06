@@ -1,14 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @pessoa.nome %>
-</p>
+<h1>
+  <strong><%= @pessoa.nome %></strong>
+  <br>
+  <strong><%= @pessoa.email %></strong>
+</h1>
 
-<p>
-  <strong>Email:</strong>
-  <%= @pessoa.email %>
-</p>
+<div class="row">
+  <% @pessoa.lugares.each do |lugar|  %>
+    <div class="col-md-12 lugarNaLista">
+      <% if lugar.pictures? %>
+        <div class="col-md-3 img-fluid">
+          <%= link_to(image_tag(lugar.pictures[0].url, width: 400, height: 260, class: "img-responsive"), lugar_path(lugar.id)) %>
+        </div>
+      <% end %>
+
+      <div class="col-md-9 nomeLugar">
+        <%= lugar.nome %>
+      </div>
+      <div class="col-md-8 enderecoLugar">
+        <%= " #{lugar.endereco}, #{lugar.cidade}, #{lugar.estado}" %>
+        <br>
+        <%= lugar.tipo %>
+      </div>
+    </div>
+  <% end %>
+</div>
 
 <%= link_to 'Edit', edit_pessoa_path(@pessoa) %> |
 <%= link_to 'Back', pessoas_path %>

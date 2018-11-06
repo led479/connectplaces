@@ -10,6 +10,9 @@ class ComentariosController < ApplicationController
   end
 
   def destroy
+    @comentario = Comentario.find(params[:id])
+    @comentario.destroy
+    redirect_to lugar_url(id_pagina_atual)
   end
 
   private

@@ -22,9 +22,10 @@
       <%= render 'comentarios/comentarios_form' %>
     </div>
   <% else %>
-    <div class="logarComentarios">
+    <div class="logarComentarios row">
+      <div class="col-md-8 col-md-offset-2">
       <%= link_to "Você precisa estar logado", login_path %> para postar comentários
-
+      </div>
     </div>
 
   <% end %>
@@ -44,6 +45,9 @@
           <div>
             Nota: <%= comentario.nota %>
           </div>
+        <% end %>
+        <% if @lugar.pessoa.id == id_logado %>
+          <%= link_to "Apagar", comentario_path(comentario.id), method: :delete %>
         <% end %>
       </div>
     <% end %>
