@@ -1,15 +1,11 @@
 <div class="container">
-  <div class="col-md-8">
+  <div class="col-md-8 col-md-offset-2">
     <%= form_for(@comentario) do |f| %>
 
       <%= f.label :texto %>
       <%= f.text_area :texto, class: 'form-control' %>
 
-      <%#= f.label :nota %>
-      <%#= f.text_field :nota, class: 'form-control' %>
-
       <%= f.label :nota %>
-      <%#= f.select :nota, [1,2,3,4,5,6,7,8,9,10], class: 'form-control custom-select' %>
       <%= f.select :nota, [1,2,3,4,5,6,7,8,9,10], class: 'form-control custom-select' %>
 
       <%= f.submit "Postar", class: "btn btn-primary" %>

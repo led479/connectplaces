@@ -9,7 +9,7 @@
     <ul>
     <% @lugar.pictures.each do |pic| %>
       <li>
-        <%= image_tag(pic.url, class: "img-responsive") %>
+        <%= link_to(image_tag(pic.url, width: 720, height: 480, class: ""), pic.url, target: :_blank )%>
       </li>
     <% end %>
     </ul>
