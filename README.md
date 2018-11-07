@@ -3,7 +3,7 @@
 * Após isto rodar o comando para instalar o sqlite3 e as dependências
 ```sh
 sudo apt install libsqlite3-dev
-sudo apt install gcc libcurl4-openssl-dev libxml2-dev -y
+sudo apt install image-magick gcc libcurl4-openssl-dev libxml2-dev -y
 ```
 * Depois entre no terminal e digite o comando para clonar o projeto
  ```sh
