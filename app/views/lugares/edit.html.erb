@@ -1,2 +1,6 @@
-<h1><%= @lugar.nome %></h1>
-<p>Find me in app/views/lugares/edit.html.erb</p>
+<h1>Novo Lugar</h1>
+<% if logged_in? %>
+  <%= render 'lugares/lugares_form' %>
+<% else %>
+  <h1>Você precisa estar logado para cadastrar um lugar</h1>
+<% end %>

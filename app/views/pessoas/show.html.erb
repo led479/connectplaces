@@ -26,6 +26,8 @@
         <%= " #{lugar.endereco}, #{lugar.cidade}, #{lugar.estado}" %>
         <br>
         <%= lugar.tipo %>
+        <br>
+        <%= link_to "Editar", edit_lugar_path(lugar.id) %>
       </div>
     </div>
   <% end %>

@@ -45,7 +45,7 @@ class LugaresController < ApplicationController
   # PUT /lugares/{id}
   def update
     @lugar = Lugar.find(params[:id])
-    if @lugar.update_attributes(params)
+    if @lugar.update_attributes(lugar_params)
       redirect_to @lugar
     else
       #@TODO tratar params errados
