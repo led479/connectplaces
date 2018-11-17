@@ -1,10 +1,14 @@
-<p id="notice"><%= notice %></p>
-
-<h1>
-  <strong><%= @pessoa.nome %></strong>
+<div class="tituloPessoa">
+  <%= @pessoa.nome %>
   <br>
-  <strong><%= @pessoa.email %></strong>
-</h1>
+  <%= @pessoa.email %>
+</div>
+
+<%= link_to 'Editar', edit_pessoa_path(@pessoa), class: 'btn btn-primary' %>
+
+<div class="lugaresPerfilPessoa">
+  Lugares Cadastrados
+</div>
 
 <div class="row">
   <% @pessoa.lugares.each do |lugar|  %>
@@ -27,5 +31,4 @@
   <% end %>
 </div>
 
-<%= link_to 'Edit', edit_pessoa_path(@pessoa) %> |
-<%= link_to 'Back', pessoas_path %>
+

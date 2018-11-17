@@ -33,6 +33,7 @@ class LugaresController < ApplicationController
       redirect_to @lugar
     else
       #@TODO tratar params errados
+      render :new
     end
   end
 
@@ -43,14 +44,16 @@ class LugaresController < ApplicationController
 
   # PUT /lugares/{id}
   def update
+    @lugar = Lugar.find(params[:id])
     if @lugar.update_attributes(params)
       redirect_to @lugar
     else
       #@TODO tratar params errados
+      render :edit
     end
   end
 
-  def delete
+  def destroy
     @lugar = Lugar.find(params[:id])
     @lugar.destroy
     redirect_to root_url
