@@ -1,13 +1,4 @@
-<div class="col-md-4 col-md-offset-4">
-  <%= form_tag(lugares_path, method: :get) do %>
-    <%= text_field_tag :term, params[:term], class: "searchTerm", placeholder: "Que lugar você procura?" %>
-    <%= button_tag 'Search', class: "searchButton" do %>
-      <i class="fa fa-search" aria-hidden="true"></i>
-    <% end %>
-
-  <% end %>
-</div>
-
+<%= render 'shared/barra_de_busca' %>
 
 <div class="row">
   <% @lugares.each do |lugar|  %>
