@@ -56,7 +56,7 @@ class LugaresController < ApplicationController
   def destroy
     @lugar = Lugar.find(params[:id])
     @lugar.destroy
-    redirect_to root_url
+    redirect_to pessoa_url(id_logado)
   end
 
   private
