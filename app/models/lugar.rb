@@ -6,6 +6,17 @@ class Lugar < ApplicationRecord
 
   mount_uploaders :pictures, PictureUploader
 
+  def possui_nota
+    tem_nota = false
+    self.comentarios.each do |comentario|
+      if comentario.nota
+        tem_nota = true
+        break
+      end
+    end
+    return tem_nota
+  end
+
   def media_nota
     nota = 0.0
     num_notas = 0

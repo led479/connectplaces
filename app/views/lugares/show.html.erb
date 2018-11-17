@@ -3,7 +3,9 @@
   <div class="descricaoLugar">
     <%= @lugar.descricao %>
     <br><br>
-    <%= "Média das notas: #{@lugar.media_nota}" %>
+    <% if @lugar.possui_nota %>
+      <%= "Média das notas: #{@lugar.media_nota}" %>
+    <% end %>
   </div>
 
 
