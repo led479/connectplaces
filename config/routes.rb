@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
   root 'paginas_estaticas#index'
-  resources :pessoas do
+  resources :pessoas, only: [:show, :new, :create, :edit, :update, :destroy] do
     resources :lugares, only: :index
   end
   resources :lugares

@@ -1,6 +1,7 @@
+<%= render 'shared/barra_de_busca' %>
+
 <div class="row">
   <% @lugares.each do |lugar|  %>
-<!--<%#= link_to lugar_path(lugar.id) do %> Tentativa de fazer a div inteira clicavel.-->
     <div class="col-md-12 lugarNaLista">
       <% if lugar.pictures? %>
         <div class="col-md-3 img-fluid">
@@ -18,7 +19,6 @@
       </div>
 
     </div>
-  <%# end %>
   <% end %>
 </div>
 

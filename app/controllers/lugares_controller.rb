@@ -2,7 +2,14 @@ class LugaresController < ApplicationController
 
   # GET /lugares
   def index
-    @lugares = Lugar.all
+    @lugares = if params[:term]
+      Lugar.where('tipo LIKE ? OR nome LIKE ? OR cidade LIKE ? OR estado LIKE ? OR endereco LIKE ?',
+                  "%#{params[:term]}%", "%#{params[:term]}%", "%#{params[:term]}%",
+                  "%#{params[:term]}%", "%#{params[:term]}%")
+    else
+      Lugar.all
+    end
+
   end
 
   # GET /lugares/{id}
@@ -26,6 +33,7 @@ class LugaresController < ApplicationController
       redirect_to @lugar
     else
       #@TODO tratar params errados
+      render :new
     end
   end
 
@@ -36,22 +44,24 @@ class LugaresController < ApplicationController
 
   # PUT /lugares/{id}
   def update
-    if @lugar.update_attributes(params)
+    @lugar = Lugar.find(params[:id])
+    if @lugar.update_attributes(lugar_params)
       redirect_to @lugar
     else
       #@TODO tratar params errados
+      render :edit
     end
   end
 
-  def delete
+  def destroy
     @lugar = Lugar.find(params[:id])
     @lugar.destroy
-    redirect_to root_url
+    redirect_to pessoa_url(id_logado)
   end
 
   private
 
   def lugar_params
-    params.require(:lugar).permit(:nome, :descricao, :cidade, :estado, :endereco, :tipo, pictures: [])
+    params.require(:lugar).permit(:nome, :descricao, :cidade, :estado, :endereco, :tipo, :term, pictures: [])
   end
 end

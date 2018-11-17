@@ -1,10 +1,5 @@
 class PessoasController < ApplicationController
 
-  # GET /pessoas
-  def index
-    @pessoas = Pessoa.all
-  end
-
   # GET /pessoas/1
   def show
     @pessoa = Pessoa.find(params[:id])
