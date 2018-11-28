@@ -24,7 +24,6 @@ class PessoasController < ApplicationController
       redirect_to @pessoa, notice: 'Pessoa was successfully created.'
       log_in @pessoa
     else
-      #@TODO tratar params errados
       render :new
     end
   end
@@ -35,7 +34,6 @@ class PessoasController < ApplicationController
     if @pessoa.update(pessoa_params)
       redirect_to @pessoa, notice: 'Pessoa was successfully updated.'
     else
-      #@TODO tratar params errados
       render :edit
     end
   end

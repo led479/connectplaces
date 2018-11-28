@@ -9,7 +9,6 @@ class LugaresController < ApplicationController
     else
       Lugar.all
     end
-
   end
 
   # GET /lugares/{id}
@@ -20,7 +19,7 @@ class LugaresController < ApplicationController
   end
 
 
-  # SHOW
+  # GET /lugares/new
   def new
     @lugar = Lugar.new
   end
@@ -32,7 +31,6 @@ class LugaresController < ApplicationController
     if @lugar.save
       redirect_to @lugar
     else
-      #@TODO tratar params errados
       render :new
     end
   end
@@ -48,11 +46,11 @@ class LugaresController < ApplicationController
     if @lugar.update_attributes(lugar_params)
       redirect_to @lugar
     else
-      #@TODO tratar params errados
       render :edit
     end
   end
 
+  # DELETE /lugares/{id}
   def destroy
     @lugar = Lugar.find(params[:id])
     @lugar.destroy

@@ -5,7 +5,8 @@
     <div class="col-md-12 lugarNaLista">
       <% if lugar.pictures? %>
         <div class="col-md-3 img-fluid">
-          <%= link_to(image_tag(lugar.pictures[0].url, width: 400, height: 260, class: "img-responsive"), lugar_path(lugar.id)) %>
+          <%= link_to(image_tag(lugar.pictures[0].url, width: 400, height: 260, class: "img-responsive"),
+                      lugar_path(lugar.id)) %>
         </div>
       <% end %>
 
