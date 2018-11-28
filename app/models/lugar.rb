@@ -29,7 +29,7 @@ class Lugar < ApplicationRecord
     if num_notas == 0
       return nil
     else
-      return nota/num_notas.round(1)
+      return (nota/num_notas).round(1)
     end
   end
 end
